@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b9c33b44d0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    
+    <style>
+   * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        #navbarall {
+            position: fixed;
+            top: 0%;
+            background-color: white;
+            width: 100%;
+
+
+        }
+
+
+        #india {
+            display: flex;
+            flex-direction: row;
+            border: 0.5px 0px 0.5px 0.5px solid rgb(182, 182, 182);
+            background-color: gainsboro;
+            width: 2000px;
+
+        }
+
+        .indiaim {
+            height: 20px;
+            width: 35px;
+            border-radius: 20px;
+
+        }
+
+        #india>div {
+            padding: 4px;
+        }
+
+        .seim {
+            background-color: white;
+        }
+
+        .serch {
+            display: flex;
+            width:100%;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: 10px;
+            /* border: 1px solid green; */
+
+        }
+
+        .logo {
+            height: 45px;
+            width: 160px;
+        }
+        .serchAndserchLogo{
+            display: flex;
+            width: 60%;
+            /* border: 3px solid red; */
+        }
+
+        .serch>div>input {
+            height: 35px;
+            width: 90%;
+            margin-right: 0px;
+            /* border: 3px solid red; */
+        }
+
+        .seric {
+            height: 35px;
+            width: 30px;
+            background-color: red;
+            margin-left: 0px;
+            padding: 3px;
+            padding-left: 0px;
+
+
+        }
+
+        .fas {
+            margin: 4px;
+            padding: 3px;
+
+
+        }
+
+        .user {
+            height: 35px;
+            width: 35px;
+
+            text-align: center;
+            padding: 4px;
+
+        }
+
+        .user>div,
+        h6,
+        .fas {
+            margin: 0px;
+        }
+
+        .far {
+            margin-left: 1px;
+
+        }
+
+        .ALC {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: 25% 25% 25%;
+        }
+
+        .menu-button {
+            background-color: transparent;
+            color: rgb(92, 64, 64);
+            /* padding: 16px;
+            font-size: 16px; */
+            cursor: pointer;
+            /* border: 1px solid blue; */
+            border: none;
+            text-decoration: underline;
+
+        }
+
+        .right-menu {
+            position: relative;
+            display: inline-block;
+            float: right;
+            /* margin-right: 50%; */
+
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+        }
+
+        .dropdown-menu td {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            /* display: block; */
+            display: inline-block;
+            /* width: 400px; */
+            width: 90px;
+            padding: 10px;
+
+
+            /* border: 1px solid red; */
+        }
+
+        .dropdown-menu {
+            /* color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block; */
+            width: 350px;
+            height: 300px;
+            /* display: flex;  */
+            background-color: honeydew;
+
+
+
+            /* border: 4px solid red; */
+            font-size: 20px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #000;
+            color: #fff;
+
+        }
+
+        .right-menu:hover .dropdown-menu {
+            display: block;
+        }
+
+        .right-menu:hover.menu-button {
+            background-color: transparent;
+        }
+
+
+        .accmenu-button{
+            background-color: transparent;
+            color: rgb(92, 64, 64);
+            /* padding: 16px; */
+            font-size: 10px;
+            cursor: pointer;
+           border: 0px;
+            margin-left: 10px;
+            padding-left: -15px;
+
+        }
+        .acc-menu{
+            position: relative;
+            /* display: inline-block; */
+            float: right;
+            margin-right: 50%;
+           margin: 5px;
+
+        }
+        .accdropdown-menu{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index:1;
+           
+            
+        }
+
+        .accdropdown-menu ul:hover{
+            background-color: #000;
+            color: #fff;
+           
+
+        }
+        .acc-menu:hover .accdropdown-menu{
+            display: block;
+        }
+        .acc-menu:hover.accmenu-button{
+            background-color: transparent;
+        }
+
+        .testcase {
+            height: 70px;
+            width: 70px;
+            /* border: 4px solid rgb(223, 74, 37); */
+        }
+        #allbtn {
+            height: 40px;
+            width:97vw;
+            border: 1px solid rgb(181, 181, 182);
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            justify-content: space-around;
+            margin-top: 8px;
+            padding: 0px, 5%;
+
+        }
+
+        .btn>button {
+            border: none;
+            background-color: white;
+        }
+
+        #bedpage{
+            color: red;
+            cursor: pointer;
+        }
+
+        #sofaPage{
+            color: red;
+            cursor: pointer;
+        }
+    /* ////////maincontent/////// */
+#mainContaner{
+    display: grid;
+    width:85%;
+    /* border: 1px solid red; */
+    margin: auto;
+    height: 700px;
+    grid-template-columns: 65% 35%;
+    gap: 10px;
+    max-width: 1000px;
+    margin-top: 400px;
+}
+
+/* #mainContaner>div{
+     border: 1px solid green; 
+} */
+
+.leftcontener{
+    display: grid;
+    grid-template-rows: 70%  30%;
+    gap: 10px;
+}
+
+/* .leftcontener>div{
+    border: 1px solid blue;
+} */
+/* .leftcontener>div:nth-child(1)image{
+    height: 10%;
+    width: 100%;
+} */
+.maim{
+    height: 100%;
+    width: 100%;
+}
+
+.smallImageClass{
+    height: 100%;
+    width: 100%;
+}
+
+.smallimagediv{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 5px;
+}
+.smallimagediv>div{
+    height: 50%;
+    /* border: 1px solid gray; */
+    padding: 10px;
+    
+}
+.smallimagediv>div>image{
+    height: 100%;
+    width: 100%;
+}
+
+.productName{
+    height: 70px;
+    width: 100%;
+    /* border: 1px solid green; */
+    margin: 28px 0px;
+}
+.productretting{
+    height: 40px;
+    width: 100%;
+    /* border: 1px solid blue; */
+    margin: 25px 0px;
+}
+.divofpriceandPriceData{
+    display: grid;
+    height: 90px;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+    /* border: 1px solid green; */
+}
+/* .divofpriceandPriceData>div{
+    border: 1px solid blueviolet;
+} */
+.buttofcart>button{
+    width: 250px;
+    max-width: 250px;
+    height: 40px;
+     margin-right: 3px;
+    border-radius: 5px;
+    /* margin-left: 30px; */
+    margin-top: 150px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+  
+
+}
+
+
+/* footercsspatr////////// */
+
+#footer{
+          margin-top: 5vh;
+          width: 100%;
+          height: 400px;
+          
+      }
+      .footer1{
+          height: 70%;
+          display: grid;
+          grid-template-columns:repeat(4,1fr) ;
+          background-color: gray;
+          color: rgb(255, 255, 255);
+      }
+      .footer1>div>h5,p{
+          margin:2vh;
+      }
+      .footer1>div{
+          padding: 10px;
+      }
+      .footer2{
+          height: 20%;
+          background-color: black;
+          color: #ffffff;
+          display: flex;
+          justify-content: space-around;
+          padding: 10px;
+          padding-bottom: 40px;
+
+        
+      }
+      .fot2div2{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          flex-wrap: initial;
+      }
+      .footer2>div{
+          padding: 20px;
+      }
+
+    </style>
+</head>
+<body>
+
+    <div id="navbarall">
+  
+        <div class="serch">
+            <img class="logo"
+                src="https://assets.vogue.com/photos/6129070f5ec5b91286cc4e6c/master/w_2520,h_1200,c_limit/jcrewlogopng.png"
+                alt="">
+                <div class="serchAndserchLogo">
+            <input type="text" placeholder="Serch">
+            <div class="seric"><i class="fas fa-search"></i></div>
+        </div>
+            <div class="ALC">
+                <div class="user">
+                    <div> <i class="far fa-user"></i></div>
+    
+                    <!-- <h6>Account</h6> -->
+                    <div class="acc-menu">
+                        <button class="accmenu-button">Signup</button>
+                        <div class="accdropdown-menu">
+               
+                    <ul id="openlogpage">Account</ul>
+                    <ul id="logoutTheUser">logout</ul>
+                    </div> 
+                     </div> 
+                </div>
+                <div class="user">
+                    <i class="far fa-heart"></i>
+                    <h6>List</h6>
+                </div>
+                <div class="user addtocartbu">
+                    <i class="fas fa-cart-plus"></i>
+                    <h6>cart</h6>
+                </div>
+            </div>
+        </div>
+        <div id="allbtn">
+            <div class="productBar">
+                <div class="right-menu">
+                    <button class="menu-button">New</button>
+                    <div class="dropdown-menu">
+    
+    
+                        <table>
+                            <tr>
+                                <td id="sofaPage">For Women</td>
+                                <td>For Men</td>
+    
+                                <td>For Girls</td>
+                                <td>For Boys</td>
+                                
+                            </tr>
+    
+                        </table>
+                        </div>
+                </div>
+            </div>
+            <div class="btn"><button>Women</button></div>
+            <div class="btn"><button>Men</button></div>
+            <div class="btn"><button>Kids</button></div>
+            <div class="btn"><button>Swim</button></div>
+            <div class="btn"><button>Cashmere</button></div>
+            <div class="btn"><button>Sale</button></div>
+           
+        </div>
+    </div>
+    </div>
+    
+
+
+    
+<!-- maincontent//////////////////////////////////////////// -->
+
+ <div id="mainContaner">
+<div class="leftcontener">
+    <div class="mainimagediv"></div>
+
+    <div class="smallimagediv">
+<div class="smalldivn1"></div>
+<div class="smalldivn2"></div>
+<div class="smalldivn3"></div>
+<div class="smalldivn4"></div>
+<div class="smalldivn5"></div>
+    </div>
+</div>
+<div class="rightcontener">
+    <div class="productName"></div>
+    <div class="productretting"></div>
+    <div class="divofpriceandPriceData">
+        <div class="pricename"></div>
+        <div class="pricedata"></div>
+    </div>
+   <div class="buttofcart"><button>ADD TO CART</button></div> 
+</div>
+
+
+ </div>
+
+
+ <!-- footerpart/////////// -->
+
+ <div id="footer">
+    <div class="footer1">
+        <div>
+            <h5>Help</h5>
+            <p>Customer Service</p>
+            <p>Track Order</p>
+            <p>Return & Exchanges</p>
+            <p>Shipping</p>
+            <p>International Orders</p>
+            <p>AfterPay</p>
+            <p>Contact Us</p>
+        </div>
+        <div>
+            <h5>Quick Links</h5>
+            <P>
+             Find a Store
+            </P>
+            <p>Store Services</p>
+            <p>Style On Demand</p>
+            <p>Gift Cards</p>
+            <p>Size Charts</p>
+        </div>
+        <div>
+            <h5>About J.Crew</h5>
+            <P>Our Story</P>
+            <p>Careers</p>
+            <p>Social Responsibility</p>
+            <p>Invester Relation</p>
+            <p>Term Of Use</p>
+        </div>
+        
+    </div>
+    
+        <div class="fot2div2">
+  <p>TODAY'S SALES & OFFERS ></p>
+        </div>
+    </div>
+  </div>
+  </body>
+</html>
+
+
+<script>
+
+
+
+
+  var y= JSON.parse(localStorage.getItem("Allcartproduct"));
+    if(y==null){
+        ArrOfAllCartproduct=[];
+    }
+    else{
+        var ArrOfAllCartproduct=JSON.parse(localStorage.getItem("Allcartproduct"));
+    }
+    //  console.log(typeof cartArr,"cartArr");
+
+
+
+
+
+
+
+
+
+
+
+var selectedProductfrompage=JSON.parse(localStorage.getItem("CartItemsOfFur"))
+ selectedProductfrompage.map(function (item) {
+   var maimage=document.createElement("img");
+   maimage.setAttribute("src",item.image);
+   maimage.setAttribute("class","maim")
+    document.querySelector(".mainimagediv").append(maimage)
+
+  smimofsmdiv=document.createElement("img")
+  smimofsmdiv.setAttribute("src",item.image)
+  smimofsmdiv.setAttribute("class","smallImageClass")
+document.querySelector(".smalldivn1").append(smimofsmdiv)
+
+
+smimofsmdiv2=document.createElement("img")
+  smimofsmdiv2.setAttribute("src",item.image)
+  smimofsmdiv2.setAttribute("class","smallImageClass")
+document.querySelector(".smalldivn2").append(smimofsmdiv2)
+
+smimofsmdiv3=document.createElement("img")
+  smimofsmdiv3.setAttribute("src",item.image)
+  smimofsmdiv3.setAttribute("class","smallImageClass")
+document.querySelector(".smalldivn3").append(smimofsmdiv3)
+
+
+smimofsmdiv4=document.createElement("img")
+  smimofsmdiv4.setAttribute("src",item.image)
+  smimofsmdiv4.setAttribute("class","smallImageClass")
+document.querySelector(".smalldivn4").append(smimofsmdiv4)
+
+
+smimofsmdiv5=document.createElement("img")
+  smimofsmdiv5.setAttribute("src",item.image)
+  smimofsmdiv5.setAttribute("class","smallImageClass")
+document.querySelector(".smalldivn5").append(smimofsmdiv5)
+
+   //rtight contener
+  var ppname= document.createElement("h2");
+  ppname.innerHTML=item.name;
+
+   document.querySelector(".productName").append(ppname)
+
+   var pprating=document.createElement("p4");
+   pprating.innerHTML=item.rating;
+   pprating.style.color="orange";
+   document.querySelector(".productretting").append(pprating)
+
+   var ppname=document.createElement("h2")
+   ppname.textContent=item.price;
+   document.querySelector(".pricename").append(ppname);
+
+
+   var pprupe=document.createElement("h2")
+   pprupe.textContent=item.rupee;
+   document.querySelector(".pricedata").append(pprupe);
+
+
+    //  var add = document.createElement("button");
+    //  add.textContent = "Add to Cart";
+    //   var add=document.createElement("button");
+    document.querySelector("button"),addEventListener("click",function(){
+        //   add.textContent="ADD TO CART"
+        //   add.addEventListener("click",function(){
+            // div.addEventListener("click",function(){
+alert("Added to cart")
+            cart(item)
+            window.location.href="finalCart.html"
+         })
+
+
+   
+  })
+
+  function cart(item){
+         ArrOfAllCartproduct.push(item);
+        console.log(typeof ArrOfAllCartproduct);
+        localStorage.setItem("Allcartproduct",JSON.stringify(ArrOfAllCartproduct));
+        
+      
+
+    };
+
+      
+    //go to login page
+    document.querySelector("#openlogpage").addEventListener("click" ,function(){
+        window.location.href="overstocklogin.html"
+    })
+//go to first page
+    document.querySelector("#bedpage").addEventListener("click" ,function(){
+        window.location.href="overstock_product_firstpage.html"
+    })
+    //go to sofa page 
+
+    document.querySelector("#sofaPage").addEventListener("click" ,function(){
+        window.location.href="overstock_second_page_sofa@.html"
+    })
+
+    //go to home page
+    document.querySelector(".logo").addEventListener("click" ,function(){
+        window.location.href="home.html"
+    })
+    //gotocart
+    document.querySelector(".addtocartbu").addEventListener("click" ,function(){
+        window.location.href="finalcart.html"
+    });
+
+ </script>

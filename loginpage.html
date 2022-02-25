@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createAccountOrLogin</title>
+    <style>
+        .contenerOfAccounts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            height: 700px;
+            width: 900px;
+            margin-top: 10px;
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+
+
+        .contenerOfAccounts>div {
+           
+            padding: 50px;
+            margin-top: 10px;
+        }
+        .contenerOfAccounts>div:nth-child(1) {
+            border-right: 3px solid rgb(6, 168, 0);
+            /* padding: 50px; */
+        }
+
+        .createpassdivs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* border: 1px solid rgb(14, 36, 233); */
+            /* width: 80%;
+        margin-left: 0%; */
+        }
+
+        .createpassdivs>div>input {
+            height: 30px;
+            width: 90%;
+            /* border: 1px solid rgb(14, 36, 233); */
+            border-radius: 5px;
+        }
+
+        #emailofcr {
+            height: 40px;
+            width: 94%;
+            border-radius: 5px;
+
+        }
+
+        #submitOfcreztacc {
+            height: 40px;
+            width: 95%;
+            background-color: rgb(32, 114, 161);
+            margin-bottom: 50px;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+
+        .guistuserdiv {
+            height: 40px;
+            width: 95%;
+            background-color: gainsboro;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+
+        #createaccount {
+            text-align: center;
+        }
+        #logingmail{
+            height: 40px;
+            width: 94%;
+            border-radius: 4px;
+        }
+        #loginpasswd{
+            height: 40px;
+            width: 94%;
+            border-radius: 4px;
+        }
+        .submitOfLOginbutt>input{
+            height: 40px;
+            width: 94%;
+            text-align: center;
+            margin-top: 30px;
+            background-color: rgb(13, 122, 13);
+            font-size: 2.5vh;
+            padding: 2px;
+            border-radius: 4px;
+        }
+       
+
+        #signindetail{
+          
+           text-align: center;
+        }
+
+        .navaroflogpage {
+            height: 50px;
+            width: 60%;
+            border-bottom: 1px solid rgb(14, 36, 233);
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+        .oflogpagenav{
+            height: 45px;
+            width: 130px;
+        }
+        .navaroflogpage>div{
+            margin-bottom: 0%;
+        }
+
+
+        /* footer data////// */
+
+
+        #footer{
+          margin-top: 5vh;
+          width: 100%;
+          height: 400px;
+          
+      }
+      .footer1{
+          height: 70%;
+          display: grid;
+          grid-template-columns:repeat(4,1fr) ;
+          background-color: gray;
+          color: rgb(255, 255, 255);
+      }
+      .footer1>div>h5,p{
+          margin:2vh;
+      }
+      .footer1>div{
+          padding: 10px;
+      }
+      .footer2{
+          height: 20%;
+          background-color: black;
+          color: #ffffff;
+          display: flex;
+          justify-content: space-around;
+          padding: 10px;
+          padding-bottom: 40px;
+
+        
+      }
+      .fot2div2{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          flex-wrap: initial;
+      }
+      .footer2>div{
+          padding: 20px;
+      }
+        
+        @media only screen and (min-width :0px) and (max-width:420px) {
+           .contenerOfAccounts {
+               grid-template-rows: 700px 600px;
+               grid-template-columns:1fr ;
+               width:90%;
+               height: 1400px;
+              
+
+            }
+            .contenerOfAccounts>div:nth-child(2){
+                margin-top: 20px;
+                border-top: 1px solid green;
+            }
+
+            .contenerOfAccounts>div:nth-child(1) {
+            border-right: 0px;
+            /* padding: 50px; */
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navaroflogpage">
+        <div><img
+                src="https://assets.vogue.com/photos/6129070f5ec5b91286cc4e6c/master/w_2520,h_1200,c_limit/jcrewlogopng.png"
+                alt="" class="oflogpagenav"></div>
+                <div><p>You are using our secure server</p></div>
+    </div>
+    <div class="contenerOfAccounts">
+        <div id="createaccount">
+
+            <h1>Create Account</h1>
+            <form id="colectdetail" action="">
+                <h4>Email ADDress*</h4>
+                <input id="emailofcr" type="email" placeholder="Email">
+
+                <div class="createpassdivs">
+                    <div>
+                        <h3>create Password</h3>
+                        <input class="creatpass" type="passwd" placeholder="password">
+                    </div>
+                    <div>
+                        <h3>conform Password</h3>
+                        <input class="conformpass" type="passwd" placeholder="confirm passeord">
+                    </div>
+
+                </div>
+                <div>
+                    <p>sign up to exclusive offers from Ovrstack .com delivered tight to your inbox**</p>
+
+                </div>
+                <input id="submitOfcreztacc" type="submit" placeholder="Create Account">
+
+            </form>
+
+
+            <button class="guistuserdiv">Continue as Guest</button>
+            <p>By creating an account or continueing as a Guest,you agree to our Terms & condotions and Privacy policy.</p>
+            <p>Terms & conditions | Privacy Policy.</p>
+            <p>**Yor are unsubscribe at any time</p>
+        </div>
+
+
+
+
+        <div id="signindetail">
+
+            <h1>Sign In</h1>
+            <h4>Email Address*</h4>
+            <form id="loginform" action="">
+                <input id="logingmail" type="gmail" placeholder="Email">
+                <h3>password</h3>
+                <input id="loginpasswd" type="password" placeholder="Password">
+               <div class="submitOfLOginbutt"><input type="submit" placeholder="Sign In"></div>
+            </form>
+            <h6>forgot your password?</h6>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <!-- footerpart/////////// -->
+
+    <div id="footer">
+        <div class="footer1">
+            <div>
+                <h5>Help</h5>
+                <p>Customer Service</p>
+                <p>Track Order</p>
+                <p>Return & Exchanges</p>
+                <p>Shipping</p>
+                <p>International Orders</p>
+                <p>AfterPay</p>
+                <p>Contact Us</p>
+            </div>
+            <div>
+                <h5>Quick Links</h5>
+                <P>
+                 Find a Store
+                </P>
+                <p>Store Services</p>
+                <p>Style On Demand</p>
+                <p>Gift Cards</p>
+                <p>Size Charts</p>
+            </div>
+            <div>
+                <h5>About J.Crew</h5>
+                <P>Our Story</P>
+                <p>Careers</p>
+                <p>Social Responsibility</p>
+                <p>Invester Relation</p>
+                <p>Term Of Use</p>
+            </div>
+            
+        </div>
+        
+            <div class="fot2div2">
+      <p>TODAY'S SALES & OFFERS ></p>
+            </div>
+        </div>
+      </div>
+</body>
+
+</html>
+<script>
+    var createAccDetali=JSON.parse(localStorage.getItem("allUseraccdata"))||[];
+    console.log( createAccDetali.length);
+    document.querySelector("#colectdetail").addEventListener("submit",function(event){
+        event.preventDefault();
+ var creategail =document.querySelector("#emailofcr").value;
+ var createpasswd =document.querySelector(".creatpass").value;
+ var conformfass =document.querySelector(".conformpass").value;
+ 
+var createdata={
+    cgmail :creategail,
+    cpass :createpasswd,
+    conpass : conformfass
+}
+
+if(createdata.cpass != createdata.conpass){
+    alert("check passwd")
+}
+else if( check( createAccDetali)==true){
+    alert("Already have account -login please")
+}
+else{
+   
+
+createAccDetali.push(createdata);
+// console.log(createAccDetali);
+localStorage.setItem("allUseraccdata",JSON.stringify(createAccDetali))
+alert("create account complited")
+};
+
+function check(createAccDetali){
+    for(var i=0;i<createAccDetali.length;i++){
+        if(creategail==createAccDetali[i].cgmail){
+            return true;
+        }
+        return false;
+    };
+}
+
+
+    });
+
+
+    document.querySelector("#loginform").addEventListener("submit",lofunc);
+   
+    var accde = JSON.parse(localStorage.getItem("allUseraccdata"));
+    var logde=JSON.parse(localStorage.getItem("userDataOfLogIdIn"))||[];
+    var x=JSON.parse(localStorage.getItem("CartItemsOfFur"));
+//   if(x==null){
+//     cartArrFF=[];
+//   }
+//   else{
+//     var cartArrFF=JSON.parse(localStorage.getItem("CartItemsOfFur"))
+//   }
+       
+   
+    function lofunc(event){
+    //  var x=accde;
+    // console.log(accde);
+      
+        event.preventDefault();
+        var loemi=document.querySelector("#logingmail").value;
+        var logpa =document.querySelector("#loginpasswd").value;
+       var c=0;
+       var userLogindata={
+           logidIn_user_mail:loemi,
+           logidIn_user_passwd:logpa
+       }
+
+      
+      
+       
+      
+        for(var i=0;i<accde.length;i++)
+        {
+            if(accde[i].cgmail==loemi&&accde[i].cpass==logpa&&logde.length==0){
+                logde.push(userLogindata);
+                localStorage.setItem("userDataOfLogIdIn",JSON.stringify(logde));
+                window.location.href="bill.html"
+            }
+            
+            else if(accde[i].cgmail==loemi&&accde[i].cpass==logpa&&logde.length==1){
+                alert("already loged in")
+            }
+
+            else if(accde[i].cgmail!=loemi || accde[i].cpass!=logpa){
+                alert("Invalid Login or Passwd")
+            }
+            
+          
+        }
+        // if(c>=1){
+        //        alert("login sucessful");
+        //     //    window.location.href="home.html"
+        //    }
+        //    else{
+        //        alert("invalid details")
+              
+        //    }
+
+    }
+
+
+      //go to home page
+      document.querySelector(".navaroflogpage").addEventListener("click" ,function(){
+        window.location.href="index.html"
+    })
+
+
+</script>

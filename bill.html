@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://kit.fontawesome.com/b9c33b44d0.js" crossorigin="anonymous"></script>
+<style>
+
+* {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        #navbarall {
+            position: fixed;
+            top: 0%;
+            background-color: white;
+            width: 100%;
+
+
+        }
+
+
+        #india {
+            display: flex;
+            flex-direction: row;
+            border: 0.5px 0px 0.5px 0.5px solid rgb(182, 182, 182);
+            background-color: gainsboro;
+            width: 2000px;
+
+        }
+
+        .indiaim {
+            height: 20px;
+            width: 35px;
+            border-radius: 20px;
+
+        }
+
+        #india>div {
+            padding: 4px;
+        }
+
+        .seim {
+            background-color: white;
+        }
+
+        .serch {
+            display: flex;
+            width:100%;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: 10px;
+            /* border: 1px solid green; */
+
+        }
+
+        .logo {
+            height: 45px;
+            width: 160px;
+        }
+        .serchAndserchLogo{
+            display: flex;
+            width: 60%;
+            /* border: 3px solid red; */
+        }
+
+        .serch>div>input {
+            height: 35px;
+            width: 90%;
+            margin-right: 0px;
+            /* border: 3px solid red; */
+        }
+
+        .seric {
+            height: 35px;
+            width: 30px;
+            background-color: red;
+            margin-left: 0px;
+            padding: 3px;
+            padding-left: 0px;
+
+
+        }
+
+        .fas {
+            margin: 4px;
+            padding: 3px;
+
+
+        }
+
+        .user {
+            height: 35px;
+            width: 35px;
+
+            text-align: center;
+            padding: 4px;
+
+        }
+
+        .user>div,
+        h6,
+        .fas {
+            margin: 0px;
+        }
+
+        .far {
+            margin-left: 1px;
+
+        }
+
+        .ALC {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: 25% 25% 25%;
+        }
+
+        .menu-button {
+            background-color: transparent;
+            color: rgb(92, 64, 64);
+            /* padding: 16px;
+            font-size: 16px; */
+            cursor: pointer;
+            /* border: 1px solid blue; */
+            border: none;
+            text-decoration: underline;
+
+        }
+
+        .right-menu {
+            position: relative;
+            display: inline-block;
+            float: right;
+            /* margin-right: 50%; */
+
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+        }
+
+        .dropdown-menu td {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            /* display: block; */
+            display: inline-block;
+            /* width: 400px; */
+            width: 90px;
+            padding: 10px;
+
+
+            /* border: 1px solid red; */
+        }
+
+        .dropdown-menu {
+            /* color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block; */
+            width: 350px;
+            height: 300px;
+            /* display: flex;  */
+            background-color: honeydew;
+
+
+
+            /* border: 4px solid red; */
+            font-size: 20px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #000;
+            color: #fff;
+
+        }
+
+        .right-menu:hover .dropdown-menu {
+            display: block;
+        }
+
+        .right-menu:hover.menu-button {
+            background-color: transparent;
+        }
+
+
+        .accmenu-button{
+            background-color: transparent;
+            color: rgb(92, 64, 64);
+            /* padding: 16px; */
+            font-size: 10px;
+            cursor: pointer;
+           border: 0px;
+            margin-left: 10px;
+            padding-left: -15px;
+
+        }
+        .acc-menu{
+            position: relative;
+            /* display: inline-block; */
+            float: right;
+            margin-right: 50%;
+           margin: 5px;
+
+        }
+        .accdropdown-menu{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index:1;
+           
+            
+        }
+
+        .accdropdown-menu ul:hover{
+            background-color: #000;
+            color: #fff;
+           
+
+        }
+        .acc-menu:hover .accdropdown-menu{
+            display: block;
+        }
+        .acc-menu:hover.accmenu-button{
+            background-color: transparent;
+        }
+
+        .testcase {
+            height: 70px;
+            width: 70px;
+            border: 4px solid rgb(223, 74, 37);
+        }
+        #allbtn {
+            height: 40px;
+            width:97vw;
+            border: 1px solid rgb(181, 181, 182);
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            justify-content: space-around;
+            margin-top: 8px;
+            padding: 0px, 5%;
+
+        }
+
+        .btn>button {
+            border: none;
+            background-color: white;
+        }
+        #bedpage{
+            color: red;
+            cursor: pointer;
+        }
+
+        #sofaPage{
+            color: red;
+            cursor: pointer;
+        }
+
+/* main data of page/////////////////////////// */
+    #maincontainer {
+        padding-top: 5%;
+        margin-top: 170px;
+display: flex;
+margin: auto;
+justify-content: center;
+width: 80%;
+    }
+    #leftcontainer {
+    border: 1px solid grey;
+        width: 35%;
+        padding-top: 2%;
+        margin-top: 170px;
+    }
+    #rightcontainer {
+        border: 1px solid grey;
+        width: 35%;
+        padding-top: 2%;
+        margin-top: 170px;
+    }
+    #bottomcontainer {
+        width: 56%;
+        border: 1px solid grey;
+        margin: auto;
+        margin-top: 2%;
+    }
+    #bottomimage {
+        display: flex;
+    }
+    #detailcontainer {
+        display: flex;
+        justify-content: space-between;
+    }
+   #leftdetail p {
+margin-bottom: 17%;
+   }
+   #placeorder {
+       justify-content: flex-end;
+       display: flex;
+       width: 78%;
+       margin-top: 2%;
+   }
+   #placeorder button {
+       background-color: #81A555;
+       color:white;
+   }
+   .control-group >h3{
+       margin-left:5%;
+       margin-top: 2px;
+   }
+</style>
+</head>
+<body>
+
+    <div id="navbarall">
+  
+        <div class="serch">
+            <img class="logo"
+                src="https://assets.vogue.com/photos/6129070f5ec5b91286cc4e6c/master/w_2520,h_1200,c_limit/jcrewlogopng.png"
+                alt="">
+                <div class="serchAndserchLogo">
+            <input type="text" placeholder="Serch">
+            <div class="seric"><i class="fas fa-search"></i></div>
+        </div>
+            <div class="ALC">
+                <div class="user">
+                    <div> <i class="far fa-user"></i></div>
+    
+                    <!-- <h6>Account</h6> -->
+                    <div class="acc-menu">
+                        <button class="accmenu-button">Signup</button>
+                        <div class="accdropdown-menu">
+               
+                    <ul id="openlogpage">Account</ul>
+                    <ul id="logoutTheUser">logout</ul>
+                    </div> 
+                     </div> 
+                </div>
+                <div class="user">
+                    <i class="far fa-heart"></i>
+                    <h6>List</h6>
+                </div>
+                <div class="user addtocartbu">
+                    <i class="fas fa-cart-plus"></i>
+                    <h6>cart</h6>
+                </div>
+            </div>
+        </div>
+        <div id="allbtn">
+            <div class="productBar">
+                <div class="right-menu">
+                    <button class="menu-button">New</button>
+                    <div class="dropdown-menu">
+    
+    
+                        <table>
+                            <tr>
+                                <td id="sofaPage">For Women</td>
+                                <td>For Men</td>
+    
+                                <td>For Girls</td>
+                                <td>For Boys</td>
+                                
+                            </tr>
+    
+                        </table>
+                        </div>
+                </div>
+            </div>
+            <div class="btn"><button>Women</button></div>
+            <div class="btn"><button>Men</button></div>
+            <div class="btn"><button>Kids</button></div>
+            <div class="btn"><button>Swim</button></div>
+            <div class="btn"><button>Cashmere</button></div>
+            <div class="btn"><button>Sale</button></div>
+           
+        </div>
+    </div>
+    </div>
+    
+
+
+   <!-- maindata////////////////////////////////////////////// -->
+    <div id="maincontainer">
+       
+<div id="leftcontainer">
+        <div class="row">
+            <div class="span8">
+                <form action="billing" method="post" class="form-horizontal" id="billingform" accept-charset="utf-8">
+                   
+                    <div class="control-group">
+                        <h3>Shipping Address :- </h3>
+                        <label for="email" class="control-label">  
+                            E-Mail
+                        </label>
+                        <div class="controls">
+                            <input name="email" type="email" value="" id="email">
+                        </div>
+                    </div>
+                <form action="billing" method="post" class="form-horizontal" id="billingform" accept-charset="utf-8">
+                    <div class="control-group">
+                        <label for="email" class="control-label">  
+                          First Name
+                        </label>
+                        <div class="controls">
+                            <input name="email" type="email" value="" id="email">
+                        </div>
+                    </div>
+                    <form action="billing" method="post" class="form-horizontal" id="billingform" accept-charset="utf-8">
+                        <div class="control-group">
+                            <label for="email" class="control-label">  
+                              Last Name
+                            </label>
+                            <div class="controls">
+                                <input name="email" type="email" value="" id="email">
+                            </div>
+                        </div>
+         
+                    <div class="control-group">
+                        <label for="address" class="control-label">
+                            Address line 1
+                        </label>
+                        <div class="controls"><input name="address" placeholder="" type="text" value="" id="address"><span class="help-inline"></span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="address" class="control-label">
+                            Address line 2
+                        </label>
+                        <div class="controls"><input name="address" placeholder="" type="text" value="" id="address"><span class="help-inline"></span>
+                        </div>
+                    </div>
+         
+         
+                    <div class="control-group">
+                        <label for="city" class="control-label">    
+                            City
+                        </label>
+                        <div class="controls"><input name="city" type="text" value="" id="city">
+                        </div>
+                    </div>
+                   
+                    <div class="control-group">
+                        <label for="country" class="control-label">
+                            State
+                        </label>
+                        <div class="controls">
+                            <select name="country" id="country">
+                                <option value="">Delhi</option>
+                                <option value="">Bangalore</option>
+                            </select>
+                        </div><br>
+                        <div class="control-group">
+                            <label for="zip" class="control-label">
+                                Zip Code
+                            </label>
+                            <div class="controls"><input name="zip" type="number" value="" id="zip">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="zip" class="control-label">
+                                Phone #
+                            </label>
+                            <div class="controls"><input name="zip" type="number" value="" id="zip">
+                            </div>
+                        </div>
+                    </div>
+         
+                   
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="rightcontainer">
+            <div class="row">
+                <div class="span8">
+   
+                    <form action="billing" method="post" class="form-horizontal" id="billingform" accept-charset="utf-8">
+                        <div class="control-group">
+                            <h3>Billing Address :-</h3>
+                            <label for="email" class="control-label">  
+                                E-Mail
+                            </label>
+                            <div class="controls">
+                                <input name="email" type="email" value="" id="email">
+                            </div>
+                        </div>
+   
+                    <form action="billing" method="post" class="form-horizontal" id="billingform" accept-charset="utf-8">
+                        <div class="control-group">
+                            <label for="email" class="control-label">  
+                              First Name
+                            </label>
+                            <div class="controls">
+                                <input name="email" type="email" value="" id="email">
+                            </div>
+                        </div>
+   
+                        <form action="billing" method="post" class="form-horizontal" id="billingform" accept-charset="utf-8">
+                            <div class="control-group">
+                                <label for="email" class="control-label">  
+                                  Last Name
+                                </label>
+                                <div class="controls">
+                                    <input name="email" type="email" value="" id="email">
+                                </div>
+                            </div>
+             
+                        <div class="control-group">
+                            <label for="address" class="control-label">
+                                Address line 1
+                            </label>
+                            <div class="controls"><input name="address" placeholder="" type="text" value="" id="address"><span class="help-inline"></span>
+                            </div>
+                        </div>
+   
+                        <div class="control-group">
+                            <label for="address" class="control-label">
+                                Address line 2
+                            </label>
+                            <div class="controls"><input name="address" placeholder="" type="text" value="" id="address"><span class="help-inline"></span>
+                            </div>
+                        </div>
+             
+             
+                        <div class="control-group">
+                            <label for="city" class="control-label">    
+                                City
+                            </label>
+                            <div class="controls"><input name="city" type="text" value="" id="city">
+                            </div>
+                        </div>
+                       
+                        <div class="control-group">
+                            <label for="country" class="control-label">
+                                State
+                            </label>
+                            <div class="controls">
+                                <select name="country" id="country">
+                                    <option value="">Delhi</option>
+                                    <option value="">Bangalore</option>
+                                </select>
+                            </div><br>
+   
+                            <div class="control-group">
+                                <label for="zip" class="control-label">
+                                    Zip Code
+                                </label>
+                                <div class="controls"><input name="zip" type="number" value="" id="zip">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label for="zip" class="control-label">
+                                    Phone #
+                                </label>
+                                <div class="controls"><input name="zip" type="number" value="" id="zip">
+                                </div>
+                            </div>
+   
+                        </div>
+             
+                       
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+    <div id="bottomcontainer">
+        <p>Payment Information</p>
+        <div id="bottomimage">
+<img src="https://ztransaction.bongous.com/static/css/images/pm/visa.png" alt="">
+<img src="https://ztransaction.bongous.com/static/css/images/pm/mastercard.png" alt="">
+<img src="https://ztransaction.bongous.com/static/css/images/pm/bitcoin.png" alt="">
+        </div>
+        <div id="detailcontainer">
+        <div id="leftdetail">
+<p>Card Type</p>
+<p>Credit Card Number*</p>
+<p>Expiration Date*</p>
+<p>Security Code*</p>
+        </div>
+        <div id="rightdetail">
+            <div>
+                <select>
+                    <option>MASTERCARD</option>
+                    <option>VISACARD</option>
+                </select>
+            </div>
+<input type="number">
+<div class="date">
+    <select name="" id="">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+    </select>
+    <select name="" id="">
+        <option>2024</option>
+        <option>2025</option>
+        <option>2026</option>
+        <option>2027</option>
+    </select>
+</div>
+<input type="number" name="" id="">
+        </div>
+    </div>
+    </div>
+    <div id="placeorder">
+        <button onclick="window.location.href='thankyou.html'">PLACE ORDER >></button>
+    </div>
+   
+</body>
+</html>
+<script>
+      //go to login page
+      document.querySelector("#openlogpage").addEventListener("click" ,function(){
+        window.location.href="overstocklogin.html"
+    })
+//go to first page
+    document.querySelector("#bedpage").addEventListener("click" ,function(){
+        window.location.href="overstock_product_firstpage.html"
+    })
+    //go to sofa page 
+
+    document.querySelector("#sofaPage").addEventListener("click" ,function(){
+        window.location.href="overstock_second_page_sofa@.html"
+    })
+
+    //go to home page
+    document.querySelector(".logo").addEventListener("click" ,function(){
+        window.location.href="index.html"
+    })
+    //gotocart
+    document.querySelector(".addtocartbu").addEventListener("click" ,function(){
+        window.location.href="finalcart.html"
+    });
+</script>
+
+

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_page_of_OverStock</title>
+    <script src="https://kit.fontawesome.com/b9c33b44d0.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        #navbarall {
+            position: fixed;
+            top: 0%;
+            background-color: white;
+            width: 100%;
+
+
+        }
+
+
+        #india {
+            display: flex;
+            flex-direction: row;
+            border: 0.5px 0px 0.5px 0.5px solid rgb(182, 182, 182);
+            background-color: gainsboro;
+            width: 2000px;
+
+        }
+
+        .indiaim {
+            height: 20px;
+            width: 35px;
+            border-radius: 20px;
+
+        }
+
+        #india>div {
+            padding: 4px;
+        }
+
+        .seim {
+            background-color: white;
+        }
+
+        .serch {
+            display: flex;
+            width:100%;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: 10px;
+            /* border: 1px solid green; */
+
+        }
+
+        .logo {
+            height: 45px;
+            width: 160px;
+        }
+        .serchAndserchLogo{
+            display: flex;
+            width: 60%;
+            /* border: 3px solid red; */
+        }
+
+        .serch>div>input {
+            height: 35px;
+            width: 90%;
+            margin-right: 0px;
+            /* border: 3px solid red; */
+        }
+
+        .seric {
+            height: 35px;
+            width: 30px;
+            background-color: red;
+            margin-left: 0px;
+            padding: 3px;
+            padding-left: 0px;
+
+
+        }
+
+        .fas {
+            margin: 4px;
+            padding: 3px;
+
+
+        }
+
+        .user {
+            height: 35px;
+            width: 35px;
+
+            text-align: center;
+            padding: 4px;
+
+        }
+
+        .user>div,
+        h6,
+        .fas {
+            margin: 0px;
+        }
+
+        .far {
+            margin-left: 1px;
+
+        }
+
+        .ALC {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: 25% 25% 25%;
+        }
+
+        .menu-button {
+            background-color: transparent;
+            color: rgb(92, 64, 64);
+            /* padding: 16px;
+            font-size: 16px; */
+            cursor: pointer;
+            /* border: 1px solid blue; */
+            border: none;
+            text-decoration: underline;
+
+        }
+
+        .right-menu {
+            position: relative;
+            display: inline-block;
+            float: right;
+            /* margin-right: 50%; */
+
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+        }
+
+        .dropdown-menu td {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            /* display: block; */
+            display: inline-block;
+            /* width: 400px; */
+            width: 90px;
+            padding: 10px;
+
+
+            /* border: 1px solid red; */
+        }
+
+        .dropdown-menu {
+            /* color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block; */
+            width: 350px;
+            height: 300px;
+            /* display: flex;  */
+            background-color: honeydew;
+
+
+
+            /* border: 4px solid red; */
+            font-size: 20px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #000;
+            color: #fff;
+
+        }
+
+        .right-menu:hover .dropdown-menu {
+            display: block;
+        }
+
+        .right-menu:hover.menu-button {
+            background-color: transparent;
+        }
+
+
+        .accmenu-button{
+            background-color: transparent;
+            color: rgb(92, 64, 64);
+            /* padding: 16px; */
+            font-size: 10px;
+            cursor: pointer;
+           border: 0px;
+            margin-left: 10px;
+            padding-left: -15px;
+
+        }
+        .acc-menu{
+            position: relative;
+            /* display: inline-block; */
+            float: right;
+            margin-right: 50%;
+           margin: 5px;
+
+        }
+        .accdropdown-menu{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index:1;
+           
+            
+        }
+
+        .accdropdown-menu ul:hover{
+            background-color: #000;
+            color: #fff;
+           
+
+        }
+        .acc-menu:hover .accdropdown-menu{
+            display: block;
+        }
+        .acc-menu:hover.accmenu-button{
+            background-color: transparent;
+        }
+
+        #bedpage{
+            color: red;
+            cursor: pointer;
+        }
+
+        #sofaPage{
+            color: red;
+            cursor: pointer;
+        }
+
+       
+        .homerefresh {
+            display: grid;
+            
+            height: 800px;
+            width: 80%;
+            margin: auto;
+          
+            margin-top: 5%;
+        }
+
+
+        .homere2im {
+            height: 100%;
+            width: 100%;
+        }
+
+        .thingsyoulove {
+            display: flex;
+            height: 1700px;
+            width: 900px;
+            margin: auto;
+          
+            margin-top: 120px;
+           
+        }
+
+.thingsyoulovel{
+    width: 50%;
+    height: 100%;
+   
+}
+.thingsyoulover{
+    width: 50%;
+    height: 100%;
+    
+}
+
+        #allbtn {
+            height: 20px;
+            width:97vw;
+             border: 1px solid rgb(181, 181, 182); 
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            justify-content: space-around;
+            margin-top: 8px;
+            padding: 0px, 5%;
+
+        }
+
+        .btn>button {
+            border: none;
+            background-color: white;
+        }
+
+        .imageofthings {
+            height: 60%;
+            width: 100%;
+        }
+
+        .testcase {
+            height: 70px;
+            width: 70px;
+           
+        }
+
+      .freshfinds{
+            width: 80%;
+            margin: auto;
+            margin-top: 40px;
+          
+            height: 800px;
+        }
+
+
+        .freshfindName {
+            height: 40px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .reshfindImage {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(400px, 400px);
+            gap: 10px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .gotstylemainbox{
+            width: 80%;
+            margin: auto;
+            margin-top: 40px;
+        
+        
+        }
+
+        .gotstyleHeadline{
+            height: 10%;
+            width: 100%;
+            text-align: center;
+        }
+        .gotstyleContent{
+            margin-top: 20px;
+            gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            height: 90%;
+            grid-template-rows: 400px;
+            text-align: left;
+            /* border: 3px solid rgb(36, 23, 221); */
+        }
+      .imOfYouGot{
+          height: 80%;
+          width: 100%;
+      }
+      #footer{
+          margin-top: 5vh;
+          width: 100%;
+          height: 500px;
+          
+      }
+      .footer1{
+          height: 70%;
+          display: grid;
+          grid-template-columns:repeat(4,1fr) ;
+          background-color: gray;
+          color: rgb(255, 255, 255);
+      }
+      .footer1>div>h5,p{
+          margin:2vh;
+      }
+      .footer1>div{
+          padding: 10px;
+      }
+      .footer2{
+          height: 30%;
+          background-color: black;
+          color: #ffffff;
+          display: flex;
+          justify-content: space-around;
+          padding: 10px;
+        
+      }
+      .fot2div2{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          flex-wrap: initial;
+      }
+      .footer2>div{
+          padding: 20px;
+      }
+      .d{
+          position: relative;
+      }
+    .d img{
+        width: 100%;
+        height:20%;
+    }
+    .a{
+      position: absolute;
+      top: 50%;
+      color: #fff;
+      padding: 20px;
+      font-size: xx-large;
+     
+    }
+    
+   
+    </style>
+
+</head>
+
+<body>
+    <div id="navbarall">
+  
+        <div class="serch">
+            <img class="logo"
+                src="https://assets.vogue.com/photos/6129070f5ec5b91286cc4e6c/master/w_2520,h_1200,c_limit/jcrewlogopng.png"
+                alt="">
+                <div class="serchAndserchLogo">
+            <input type="text" placeholder="Serch">
+            <div class="seric"><i class="fas fa-search"></i></div>
+        </div>
+            <div class="ALC">
+                <div class="user">
+                    <div> <i class="far fa-user"></i></div>
+    
+                    <!-- <h6>Account</h6> -->
+                    <div class="acc-menu">
+                        <button class="accmenu-button">Signup</button>
+                        <div class="accdropdown-menu">
+               
+                    <ul id="openlogpage">Account</ul>
+                    <ul id="logoutTheUser">logout</ul>
+                    </div> 
+                     </div> 
+                </div>
+                <div class="user">
+                    <i class="far fa-heart"></i>
+                    <h6>List</h6>
+                </div>
+                <div class="user addtocartbu">
+                    <i class="fas fa-cart-plus"></i>
+                    <h6>cart</h6>
+                </div>
+            </div>
+        </div>
+        <div id="allbtn">
+            <div class="productBar">
+                <div class="right-menu">
+                    <button class="menu-button">New</button>
+                    <div class="dropdown-menu">
+    
+    
+                        <table>
+                            <tr>
+                                <td id="sofaPage">For Women</td>
+                                <td>For Men</td>
+    
+                                <td>For Girls</td>
+                                <td>For Boys</td>
+                                
+                            </tr>
+    
+                        </table>
+                        </div>
+                </div>
+            </div>
+            <div class="btn"><button>Women</button></div>
+            <div class="btn"><button>Men</button></div>
+            <div class="btn"><button>Kids</button></div>
+            <div class="btn"><button>Swim</button></div>
+            <div class="btn"><button>Cashmere</button></div>
+            <div class="btn"><button>Sale</button></div>
+           
+        </div>
+    </div>
+    </div>
+    
+    <div class="homerefresh">
+
+     
+                <img 
+                 width="100%"
+                height="100%" 
+            
+                src="https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img0.jpg" alt="">
+                <div class="a">
+                <h1>Creatively Suited</h1>
+                <p>Our new laid-back styles in world class fabrics </p>
+                <p>work for any dress code</p>
+                <p1 style="text-decoration: underline;">Visit the suit shop</p1>
+                <br>
+                <p1 style="text-decoration: underline;">Shop new arrivals</p1>
+            </div>
+            </div>
+
+       
+
+    <div class="thingsyoulove">
+        <div class="thingsyoulovel">
+            <div class="d">
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img1.jpg" alt="">
+                <div class="a">
+                    <h1>Get Dressed</h1>
+                    <p>WITH LESLIE ODOM JR.</p>
+                    <p1 style="text-decoration: underline;">Discover our spring campaign</p1>
+                </div>
+            </div>
+            <div class="d">
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img2.jpg" alt="">
+                <div class="a">
+                    <h2>The sustainable tech dock short</h2>
+                   
+                    
+                </div>
+            </div>
+            <div class="d">
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img3.jpg" alt="">
+                <div class="a">
+                   
+                    <p>Introducing</p>
+                    <h1>Protuguese cotton flannels </h1>
+                    <p1 style="text-decoration: underline;">from the somelose mills</p1>
+                </div>
+            </div>
+               
+           
+        </div>
+        <div class="thingsyoulover">
+            <div class="d">
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img4.jpg" alt="">
+                <div class="a">
+                    <h1>The new chino collection</h1>
+                    
+                    <p1 style="text-decoration: underline;">Shop fits you can trust</p1>
+                </div>
+            </div>
+            <div class="d">
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img5.jpg" alt="">
+                <div class="a">
+                    <h1>Be the best-dressed guest</h1>
+                    
+                    <p1 style="text-decoration: underline;">Visit the wedding & party shop</p1>
+                </div>
+            </div>
+            <div class="d">
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img6.jpg" alt="">
+                <div class="a">
+                    <h1>New eco-friendly swim</h1>
+                    
+                    <p1 style="text-decoration: underline;">Shop new colors and patterns</p1>
+                </div>
+            </div>
+        </div>
+        <div id="thingsyouloveImage">
+
+        </div>
+    </div>
+
+    
+
+   
+   
+  
+
+    <div class="gotstylemainbox">
+        
+        <div class="gotstyleHeadline">
+            <h1>We've Got Your Style</h1>
+        </div>
+        <div class="gotstyleContent"></div>
+    </div>
+
+   
+<div id="footer">
+    <div class="footer1">
+        <div>
+            <h5>Help</h5>
+            <p>Customer Service</p>
+            <p>Track Order</p>
+            <p>Return & Exchanges</p>
+            <p>Shipping</p>
+            <p>International Orders</p>
+            <p>AfterPay</p>
+            <p>Contact Us</p>
+        </div>
+        <div>
+            <h5>Quick Links</h5>
+            <P>
+             Find a Store
+            </P>
+            <p>Store Services</p>
+            <p>Style On Demand</p>
+            <p>Gift Cards</p>
+            <p>Size Charts</p>
+        </div>
+        <div>
+            <h5>About J.Crew</h5>
+            <P>Our Story</P>
+            <p>Careers</p>
+            <p>Social Responsibility</p>
+            <p>Invester Relation</p>
+            <p>Term Of Use</p>
+        </div>
+        
+    </div>
+    
+        <div class="fot2div2">
+  <p>TODAY'S SALES & OFFERS ></p>
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  
+    var dataThinksYouLove = [
+        
+
+        {
+
+          
+            image: "https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img1.jpg",
+            
+           
+        },
+
+        {
+
+        
+            image: "https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img2.jpg",
+
+            
+        },
+
+        {
+
+          
+            image: "https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img3.jpg",
+
+            
+        },
+        {
+
+           
+            image: "https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img4.jpg",
+
+        },
+        {
+
+image: "https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img5.jpg",
+
+
+},
+{
+
+
+image: "https://www.jcrew.com/brand_creative/homepage2022/03-Mar2/2022mar_0222_hp_m_img6.jpg",
+
+
+},
+
+
+    ];
+
+   
+    var youHaveGotyourStyle = [
+        {
+
+            name: "Shop:roundup",
+            image: "https://www.jcrew.com/brand_creative/homepage2022/03-Mar/2022mar_0215_hp_m_img11.jpg",
+            role: "The edit:Green days"
+        },
+
+        {
+
+name: "The new yorks classic patriots.",
+image: "https://www.jcrew.com/brand_creative/homepage2022/03-Mar/2022mar_0215_hp_m_img12.jpg",
+role: "See the story"
+},
+
+{
+
+name: "The winter getaway",
+image: "https://www.jcrew.com/brand_creative/homepage2022/03-Mar/2022mar_0215_hp_m_img14.jpg",
+role: "Visit the destination:sun shop."
+}
+       
+
+
+    ];
+
+    youHaveGotyourStyle.map(function (elem) {
+        var div = document.createElement("div");
+        div.setAttribute("class", "divofthingsyoulove")
+        var imageofproo = document.createElement("img");
+        imageofproo.setAttribute("src", elem.image);
+        imageofproo.setAttribute("class","imOfYouGot")
+        var sale = document.createElement("h3");
+        sale.textContent = elem.name;
+        var nameofp = document.createElement("p");
+        nameofp.textContent = elem.role;
+        div.append(imageofproo, sale, nameofp)
+
+        document.querySelector(".gotstyleContent").append(div);
+
+    });
+
+
+
+
+
+    freshfinds.map(function (elem) {
+        var div = document.createElement("div");
+        div.setAttribute("class", "divofthingsyoulove")
+        var imageofpro = document.createElement("img");
+        imageofpro.setAttribute("src", elem.image);
+        imageofpro.setAttribute("class", "imageofthings")
+       
+        var nameofp = document.createElement("h3");
+        nameofp.textContent = elem.name;
+        div.append(imageofpro,  nameofp)
+
+        document.querySelector(".reshfindImage").append(div);
+
+    });
+
+
+
+
+    dataThinksYouLove.map(function (elem) {
+        var div = document.createElement("div");
+        div.setAttribute("class", "divofthingsyoulove")
+        var imageofpro = document.createElement("img");
+        imageofpro.setAttribute("src", elem.image);
+        imageofpro.setAttribute("class", "imageofthings")
+        var sale = document.createElement("h3");
+        sale.textContent = elem.sale;
+        var nameofp = document.createElement("h3");
+        nameofp.textContent = elem.name;
+        div.append(imageofpro, sale, nameofp)
+
+        document.querySelector("#thingsyouloveImage").append(div);
+
+    });
+
+
+
+    newyearsavedata.map(function (elem) {
+        var div = document.createElement("div");
+        div.setAttribute("class", "divofthingsyoulove")
+        var imageofpro = document.createElement("img");
+        imageofpro.setAttribute("src", elem.image);
+        imageofpro.setAttribute("class", "imageofthings")
+        var sale = document.createElement("h3");
+        sale.textContent = elem.name;
+        var nameofp = document.createElement("h5");
+        nameofp.textContent = elem.role;
+        div.append(imageofpro, sale, nameofp)
+
+        document.querySelector(".newyearsaveimage").append(div);
+
+    })
+
+    //go to login page
+    document.querySelector("#openlogpage").addEventListener("click" ,function(){
+        window.location.href="overstocklogin.html"
+    })
+//go to first page
+    document.querySelector("#bedpage").addEventListener("click" ,function(){
+        window.location.href="overstock_product_firstpage.html"
+    })
+    //go to sofa page 
+
+    document.querySelector("#sofaPage").addEventListener("click" ,function(){
+        window.location.href="overstock_second_page_sofa@.html"
+    })
+
+    //go to home page
+    document.querySelector(".logo").addEventListener("click" ,function(){
+        window.location.href="home.html"
+    })
+    //gotocart
+    document.querySelector(".addtocartbu").addEventListener("click" ,function(){
+        window.location.href="finalcart.html"
+    });
+
+//logoutTheUser
+// document.querySelector("#logoutTheUser").addEventListener("click",function(){
+//      var recivelogdata=JSON.parse(localStorage.getItem("userDataOfLogIdIn"));
+ 
+//       if(recivelogdata.length>0){
+
+//  localStorage.removeItem("userDataOfLogIdIn")
+
+//  alert("logout successful")
+//  }
+// })
+   
+
+</script>
